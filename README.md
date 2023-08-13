@@ -1,6 +1,6 @@
 # Bazaar
 
-Bazaar is a custom E-Commerce website built using ![https://www.djangoproject.com/](Django) and ![https://tailwindcss.com/](TailwindCSS) that has been integrated and tested with the ![https://razorpay.com/docs/api/payments/](Razorpay) payment gateway.
+Bazaar is a custom E-Commerce website built using [Django](https://www.djangoproject.com/) and [TailwindCSS](https://tailwindcss.com/) that has been integrated and tested with the [Razorpay](https://razorpay.com/docs/api/payments/) payment gateway.
 
 Here is a short walkthrough:
 
