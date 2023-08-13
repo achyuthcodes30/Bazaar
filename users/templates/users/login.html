@@ -1,0 +1,12 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<h1 class="font-serif text-2xl my-4 flex justify-center text-indigo-600">Login to your account</h1>
+<div class="flex justify-center">
+<form action="/login" method="post">
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <input type="submit" class="text-white flex justify-center mt-3 bg-indigo-800 rounded-xl px-8 py-2 backdrop-opacity-25 hover:bg-purple-500">
+</form>
+</div>
+{% endblock %}

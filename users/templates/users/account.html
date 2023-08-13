@@ -1,0 +1,7 @@
+{% extends 'base/base.html' %}
+{% block content %}
+<h1 class="font-serif text-3xl my-8 flex justify-center text-indigo-600">My Account</h1>
+<h1 class="text-2xl flex justify-center"><b>User:</b>&nbsp;  {{user.username}}</h1>
+<h3 class="text-md mt-6 text-gray-500">You have {{cart|length}} item(s) in your cart.&nbsp;<a href="../../cart" class="no-underline hover:underline">Click to view</a></h3>
+<a href="logout" class="mt-7 inline-block py-3 px-7 bg-red-400 text-white">Log out</a>
+{% endblock %}

@@ -1,0 +1,59 @@
+{% load menu %}
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  {% block title%}{% endblock %}
+  
+</head>
+<body>
+  <nav class=" max-w-4max mx-auto py-2 px-6 flex items-center justify-normal bg-indigo-600 backdrop-opacity-25">
+      <div class="group text-left">
+          <button type="button"
+              class="inline-flex justify-center items-center w-full px-4 py-2 text-sm font-medium text-white bg-indigo-800 hover:bg-purple-500 focus:outline-none focus:bg-gray-700">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+              </svg>
+          </button>
+          {% if not request.user.is_authenticated %}
+          <!-- Dropdown menu -->
+          <div
+              class="absolute left-0 w-40 mt-1 origin-top-left bg-white divide-y divide-gray-100 rounded-md shadow-lg opacity-0 group-hover:opacity-100 group-hover:visible transition duration-300">
+              <div class="py-1">
+                  <a href="../login" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Login</a>
+                  <a href="../signup" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Signup</a>
+              </div>
+          </div>
+          {% endif %}
+      </div> 
+    <div class="logo ml-4 mr-80">
+      <a href="/" class="text-white font-bold text-2xl">Bazaar &#128717;</a>
+    </div>
+    <div class="search ml-4 mr-12">
+      <form action="search" method="get" class="flex align-center space-x-4">
+        <input type="search" name="query" placeholder="Search" class=" py-2 px-4 rounded-xl">
+        <button><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-white">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+        </svg>
+        </button>
+      </form>
+    </div>
+    <div class="menu flex ml-60 items-center space-x-4">
+      {% menu %}
+      <a href="../cart" class="flex space-x-3 py-2 px-4 bg-indigo-800 text-white rounded-xl hover:bg-purple-500">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-1">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+        </svg>({{cart|length}})</a>
+      {% if request.user.is_authenticated%}
+      <a href="../myaccount" class="flex space-x-3 py-2 px-4 rounded-xl bg-indigo-800 rounded-xl text-white hover:bg-purple-500">My Account</a>
+      {%endif%}
+    </div>
+  </nav>
+    <div class="max-w-5xl mx-auto">
+ {% block content%}
+ {% endblock %}
+    </div>
+</body>
+</html>
