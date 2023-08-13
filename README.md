@@ -19,5 +19,21 @@ https://github.com/achyuthcodes30/Bazaar/assets/113189939/7babae52-6786-4d09-a42
 5. Categorisation according to type and seller.
 6. Razorpay payment integration.
 
+## Install and run locally
+1. Set up a virtual environment.
+2. Change directories to your working directory using the ``` cd ``` command.
+3. Clone this repository
+   ```
+   git clone https://github.com/achyuthcodes30/Bazaar.git
+   ```
+4. Install the requirements
+   ```
+   pip install -r requirements.txt
+   ```
+5. Run the server locally
+   ```
+   python manage.py runserver
+   ```
+
 
 
