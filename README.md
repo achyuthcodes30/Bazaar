@@ -35,7 +35,7 @@ https://github.com/achyuthcodes30/Bazaar/assets/113189939/7babae52-6786-4d09-a42
    python manage.py runserver
    ```
 
-** Note ** : To use the payment gateway you will need to add your API key IDs and Secret to the ``` settings.py ``` file after generating them from (RazorpayX)[https://x.razorpay.com/]:
+**Note** : To use the payment gateway you will need to add your API key IDs and Secret to the ``` settings.py ``` file after generating them from (RazorpayX)[https://x.razorpay.com/]:
 ```
 RAZORPAY_KEY_ID= "YOUR_KEY_ID"
 RAZORPAY_KEY_SECRET= "YOUR_KEY_SECRET"
