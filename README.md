@@ -1,4 +1,4 @@
-# Bazaar
+## Bazaar
 
 Bazaar is a custom E-Commerce website built using [Django](https://www.djangoproject.com/) and [TailwindCSS](https://tailwindcss.com/) that has been integrated and tested with the [Razorpay](https://razorpay.com/docs/api/payments/) payment gateway.  
 
@@ -41,3 +41,5 @@ RAZORPAY_KEY_ID= "YOUR_KEY_ID"
 RAZORPAY_KEY_SECRET= "YOUR_KEY_SECRET"
 
 ```
+
+I have also added the ```db.sqlite3 ``` for some default products and non-sensitive data although it's not recommended (should be in .gitignore).
