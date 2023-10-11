@@ -44,4 +44,4 @@ RAZORPAY_KEY_SECRET= "YOUR_KEY_SECRET"
 
 I have also added the ```db.sqlite3 ``` for some default products and non-sensitive data although it's not recommended (should be in .gitignore).
 
-## Achyuth Yogesh Sosale
+## Maintainer: Achyuth Yogesh Sosale
