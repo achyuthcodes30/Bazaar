@@ -45,7 +45,7 @@ RAZORPAY_KEY_SECRET= "YOUR_KEY_SECRET"
 I have also added the ```db.sqlite3 ``` for some default products and non-sensitive data although it's not recommended (should be in .gitignore).
 
 ## Contributing
-- Make sure to either fork this repository or create your own branch. (## DO NOT PUSH TO MAIN!!)
+- Make sure to either fork this repository or create your own branch. (DO NOT PUSH TO MAIN!!)
 - Only start working on an issue when you are assigned to it. This helps prevent multiple contributors from working on the same issue at the same time.
 - Make a pull request as soon as you are assigned to as issue, this pull request will be used to track your progress on the issue by commits.
 - To maintain active collaboration, contributors are expected to have at least one commit to the PR every 30 minutes that indicates progress or an update.
