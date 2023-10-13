@@ -5,12 +5,21 @@ from .models import Userprofile
 from django.contrib.auth import login,authenticate
 from django import forms
 from .models import Userprofile
+import hashlib
+import base64
 
 class UserForm(forms.ModelForm):
-    password = forms.CharField(widget=forms.PasswordInput)
+    #password = forms.CharField(widget=forms.PasswordInput)
+    a = str(forms.CharField(widget=forms.PasswordInput)).encode()
+    password = hashlib.sha256(a).hexdigest()
+    #password = forms.CharField(hashlib.sha256(password).hexdigest())
+
     class Meta:
         model = User
-        fields=('username',)
+        x = 'password'
+        fields=('username',x)
+
+
 '''class UserForm_vendor(forms.ModelForm):
     password = forms.CharField(widget=forms.PasswordInput)
     class Meta:
