@@ -6,8 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   {% block title%}{% endblock %}
-  
-</head>
+  <style>
+    .img{
+      width:200px;
+      height:100px;
+      object-fit: cover;
+    }
+
+
+  </style>
+  </head>
 <body>
   <nav class=" max-w-4max mx-auto py-2 px-6 flex items-center justify-normal bg-indigo-600 backdrop-opacity-25">
       <div class="group text-left">
@@ -54,6 +62,7 @@
     <div class="max-w-5xl mx-auto">
  {% block content%}
  {% endblock %}
+ 
     </div>
 </body>
 </html>
