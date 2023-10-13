@@ -21,6 +21,7 @@ from django.urls import path,include
 from users.views import vendor_deets
 from store.views import search,product_deets,addtocart,cartview,remove_from_cart,change_quantity,category_view,checkout,callback
 urlpatterns = [
+    #path('vendor_signin',f"C:/Users/Adhesh/Desktop/heknite/Bazaar/users/templates/users/vendor_signin.html/views.vendor_signin",name = 'vendor_signin'),
     path('',include('base.urls')),
     path('admin/', admin.site.urls),
     path('search',search, name='search'),

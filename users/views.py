@@ -11,6 +11,11 @@ class UserForm(forms.ModelForm):
     class Meta:
         model = User
         fields=('username',)
+'''class UserForm_vendor(forms.ModelForm):
+    password = forms.CharField(widget=forms.PasswordInput)
+    class Meta:
+        model = User
+        fields=('vendor_username',)'''
         
 class UserprofileForm(forms.ModelForm):
     class Meta:
@@ -21,6 +26,7 @@ class UserprofileForm(forms.ModelForm):
 class LoginForm(forms.Form):
     username = forms.CharField(max_length=65)
     password = forms.CharField(max_length=65, widget=forms.PasswordInput)
+
 
 # Create your views here.
 def vendor_deets(request,pk):
@@ -44,3 +50,19 @@ def signup(request):
     return render(request, 'users/signin.html', {
         'form': form
     })
+def vendor_signin(request):
+    if request.method == 'POST':
+        form = UserForm(request.POST)
+        if form.is_valid():
+            user=form.save()
+            login(request, user)
+            return redirect('../')
+    else:
+        form = UserForm()
+    
+    return render(request, 'users/vendor_signin.html', {
+        'form': form
+    })
+
+
+    
